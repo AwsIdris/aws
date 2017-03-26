@@ -1,0 +1,11 @@
+What will be the output of the following code - and more importantly - WHY?
+
+
+for (var i = 0; i < 3; i++) {
+      setTimeout(function() { alert(i); }, 1000 + i);
+}
++++++++++++++
+Answer
+
+the output will be alert of tree message with value 3; and dely 100 ms 1001ms and 1002 ms.
+because setTimeout is Asynchronous Function.

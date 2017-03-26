@@ -1,0 +1,91 @@
+<button id="btn-0">Button 1!</button>
+<button id="btn-1">Button 2!</button>
+<button id="btn-2">Button 3!</button>
+
+<script type="text/javascript">
+    var prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
+    for (var btnNum = 0; btnNum < prizes.length; btnNum++) {
+        // for each of our buttons, when the user clicks it...
+        document.getElementById('btn-' + btnNum).onclick = function() {
+            // tell her what she's won!
+            alert(prizes[btnNum]);
+        };
+    }
+</script>
+
+
++++++++++++++++++++++++++++
+
+<button id="btn-0">Button 1 !</button>
+<button id="btn-1">Button 2 !</button>
+<button id="btn-2">Button 3 !</button>
+
+<script type="text/javascript"> 
+
+var prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!']; 
+
+
+
+for (var btnNum = 0; btnNum < prizes.length; btnNum++) {
+			 document.getElementById('btn-' + btnNum).onclick =fun(btnNum); 
+
+};
+function fun (btnNum){return function (){alert(prizes[btnNum]);};};
+</script> 
+
+
+
+
++++++++++++++++++++++++++++++++++++
+
+Befor
+var 
+results = $.getJSON('http://myapi.com');
+showResults(results);
+
+
+
+After
+
+$.getJSON('http://myapi.com',function(results){
+showResults(results);});
+Rewrite to Async:
+1.
+Befor:
+var sum = calculateSum(2, 6);
+console.log(sum);
+After:
+calculateSum(2, 6,function(sum){console.log(sum);};);
+
+
+2.
+Befor:
+var results = $.getJSON('http://myapi.com');
+showResults(results);
+After:
+$.getJSON('http://myapi.com',function(result){
+	showResults(results);};);
+
+3.
+Befor:
+var sum = calculateSum(2, 6);
+if (sum > 8) {
+    console.log('larger than 8');
+}
+
+after:
+calculateSum(2, 6,function(sum){if (sum > 8) {
+    console.log('larger than 8');
+};};)
+
+
+4.
+Befor:
+var data = $.getJSON('http://myapi.com');
+data = data.map(function (x) { return x * 8; });
+
+writeDataToFile(data);
+After:
+$.getJSON('http://myapi.com',function(data){ data = data.map(function (x) { return x * 8; });
+
+writeDataToFile(data);};);

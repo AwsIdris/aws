@@ -1,0 +1,18 @@
+
+Write a function that would allow you to do this:
+var addSix = createBase(6);
+addSix(10); // returns 16
+addSix(21); // returns 27
+
+Answer
+
+function addTo(x) {
+    return function FirstCall(y){
+        return x+y;
+    }
+}
+
+var newAdtion = addTo(6);
+
+alert(newAdtion(10));
+alert(newAdtion(21));
