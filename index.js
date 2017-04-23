@@ -1,37 +1,23 @@
-import HYFClass from './hykClass.js'
+<!DOCTYPE html>
 
-var JS = new HYFClass([])
+<html>
 
-var jsMembers = [
+  <head>
 
-  {firstName: 'Mauro', lastName: 'Mandracchia', type: 'teacher'},
+    <meta charset="utf-8">
 
-  {firstName: 'David', lastName: 'Furlong', type: 'teacher'},
+    <title>HYF - Fetch Repos with Promises</title>
 
-  {firstName: 'Ali', lastName: 'Barakat', type: 'Student'},
+  </head>
 
-  {firstName: 'Jad', lastName: 'Kadour', type: 'Student'}
+  <body>
 
-]
+    <div id="app">
 
+    </div>
 
+    <script src="./HomeWork.js"></script>
 
-jsMembers.forEach((member)=>{
+  </body>
 
-  if(member.type === 'teacher'){
-
-    JS.addTeacher (member)
-
-  }else{
-
-    JS.addStudent(member)
-
-  }
-
-})
-
-
-
-console.log('All Teacher: ', JS.getAllTeachers())
-
-console.log('All Students: ', JS.getAllStudents())
+</html>
